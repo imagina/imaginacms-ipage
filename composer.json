@@ -1,0 +1,28 @@
+{
+    "name": "imagina/ipage",
+    "description": "",
+    "authors": [
+        {
+            "name": "Imagina Colombia",
+            "email": "soporte@imaginacolombia.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Ipage\\": "app/",
+            "Modules\\Ipage\\Database\\Factories\\": "database/factories/",
+            "Modules\\Ipage\\Database\\Seeders\\": "database/Seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Ipage\\Tests\\": "tests/"
+        }
+    }
+}

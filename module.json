@@ -1,0 +1,12 @@
+
+{
+    "name": "Ipage",
+    "alias": "ipage",
+    "description": "manage ipage",
+    "keywords": ["ipage"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Ipage\\Providers\\IpageServiceProvider"
+    ],
+    "files": []
+}
