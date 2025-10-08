@@ -47,30 +47,6 @@ class EloquentPageRepository extends EloquentCoreRepository implements PageRepos
          *
          */
 
-        //add filter by search
-        if (isset($filter->search) && $filter->search) {
-            //find search in columns
-            $term = $filter->search;
-            $query->where(function ($query) use ($term, $filter) {
-                $query->whereHas('translations', function ($query) use ($term, $filter) {
-                    $query->where('title', 'LIKE', "%{$term}%");
-                    $query->orWhere('body', 'LIKE', "%{$term}%");
-                    $query->orWhere('slug', 'LIKE', "%{$term}%");
-                    $words = explode(' ', trim($filter->search));
-
-                    //queryng word by word
-                    if (count($words) > 1) {
-                        foreach ($words as $index => $word) {
-                            if (strlen($word) >= ($filter->minCharactersSearch ?? 3)) {
-                                $query->orWhere('title', 'like', "%" . $word . "%")
-                                    ->orWhere('body', 'like', "%" . $word . "%");
-                            }
-                        } //foreach
-                    }
-                })->orWhere('id', $term);
-            });
-        }
-
         //Response
         return $query;
     }

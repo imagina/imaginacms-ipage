@@ -71,6 +71,12 @@ class Page extends CoreModel
   ];
 
   /**
+   * Attributes to search
+   * The following attributes are added by default: id,title
+   */
+  public $searchable = ['body', 'slug'];
+
+  /**
    * Relation Media
    * Make the Many-To-Many Morph
    */
@@ -100,5 +106,4 @@ class Page extends CoreModel
       set: fn(?string $value) => !empty($value) ? $value : \Str::slug($this->title, '-'),
     );
   }
-
 }
