@@ -5,7 +5,7 @@ return [
         'manage' => [
             'title' =>  'ipage::pages.manage.title',
             'description' => 'ipage::pages.manage.description',
-            'onlyFor' => ['super-admin'],
+            'onlyFor' => [],
             'defaultAccess' => []
         ],
         'index' => [
@@ -17,25 +17,25 @@ return [
         'create' => [
             'title' =>  'ipage::pages.create.title',
             'description' => 'ipage::pages.create.description',
-            'onlyFor' => ['super-admin'],
+            'onlyFor' => [],
             'defaultAccess' => []
         ],
         'edit' => [
             'title' =>  'ipage::pages.edit.title',
             'description' => 'ipage::pages.edit.description',
-            'onlyFor' => ['super-admin'],
+            'onlyFor' => [],
             'defaultAccess' => []
         ],
         'destroy' => [
             'title' =>  'ipage::pages.destroy.title',
             'description' => 'ipage::pages.destroy.description',
-            'onlyFor' => ['super-admin'],
+            'onlyFor' => [],
             'defaultAccess' => []
         ],
         'restore' => [
             'title' =>  'ipage::pages.restore.title',
             'description' => 'ipage::pages.restore.description',
-            'onlyFor' => ['super-admin'],
+            'onlyFor' => [],
             'defaultAccess' => []
         ]
     ],
